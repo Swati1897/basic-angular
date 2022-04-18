@@ -13,6 +13,9 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/photos" href="#">Photos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/calculation" href="#">Calculation</a>
+          </li>
         
      </ul>
         <form class="d-flex">
@@ -22,6 +25,48 @@
       </div>
     </div>
   </nav>
+<hr> <hr>
+
+<!--   -->
+<div class="container">
+  <h2> Interpolation => Double_Curly_Brass </h2>
+  <div class="row">
+    <h3> Introduction </h3>
+
+    <p> My name is <strong> {{name}}</strong>.My roll no. is <strong>{{rollNo }}</strong>.
+          Passed - <strong> {{pass }}</strong> 
+    </p>
+  </div>
+</div>
+<hr> <hr> 
+
+<!--    -->
+
+<div class="container">
+  <h2> Property Binding - [ ]</h2>
+  <div class="row">
+    <input [type]="inputType" [minLength]="minL" [maxLength]="maxL" [value]="fullName">
+  </div>
+</div>
+<hr> <hr> 
+
+<!--  -->
+
+<div class="'container">
+  <h2> Event Binding -()=> click, mouseenter,mouseleave,mousemove,mouseout,mouseover </h2>
+  <div class="row">
+    <button type="button" class="btn btn-danger" (click)="message"> Click Me! </button>
+     
+    <h4> {{message}}</h4>
+
+  </div>
+</div>
+
+
+
+
+
+
 
 <router-outlet></router-outlet>
 <!-- <app-home></app-home> 

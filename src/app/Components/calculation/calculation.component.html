@@ -1,0 +1,18 @@
+<p>calculation works!</p>
+ 
+<div class="container">
+    <div class="row">
+        <input type="number" name="num1" placeholder="enter number 1" #num1> <hr>
+        <input type="number" name="num2" placeholder="enter number 2" #num2>
+        <hr>
+        <div> 
+            <button class="btn btn-primary mx-5" (click)="onAdd(10, 20)"> Add </button>
+            <button class="btn btn-primary" (click)="onSub(50, 10)"> Sub </button>
+            <button class="btn btn-primary mx-5" (click)="onDiv(60, 20)"> Div </button>
+            <button class="btn btn-primary" (click)="onMult(50, 10)"> Mult </button>
+        </div>
+        <div>
+            Result -- {{ result}}
+        </div>
+    </div>
+</div>
