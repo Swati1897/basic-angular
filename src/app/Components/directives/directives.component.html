@@ -1,0 +1,203 @@
+<p>directives works!</p>
+
+<div class="container">
+    <h2>Directives <h5> Angular directives are three types:- 
+    <ul><li> 1)Component</li>
+      <li> 2)Attribute Directives </li>
+      <li> 3)Structural Directives </li>
+    </ul>  
+    </h5></h2>
+
+    <h4>1) Structural Directives</h4>
+    <h5>*ngIf</h5>
+    <h6> using symbols [! ,!=, =, ===, == ]</h6>
+<!-- *ngIf -->
+    <div>
+  <!---   if showCard is true   -->
+      <div class="card" *ngIf ="showCard">
+        <div class="card text-center">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">
+              2 days ago
+            </div>
+          </div>
+      </div>
+  <!-- if showcard is false -->  
+      <div class="card" *ngIf="! showCard" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>  
+    </div>
+</div>
+<hr>
+
+<!-- <h6> 2nd example></h6>
+  <div class="row" *ngIf="showCard; else elseBolck">
+    <div class="col-6">
+      <p> Option 1 </p>
+      <div class="card" style="width: 18rem;">
+        <img src="assets/22.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  
+<ng-template #elseBolc>
+  <div class="col-6"  >
+    <p> Option 2 </p>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="assets/24.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+ </div> -->
+
+<!-- *ngFor -->
+<div class="container">
+    <h3> *ngFor </h3>
+        <ul>
+            <li *ngFor="let item of [1,2,3,4,5,6]">
+                 Item {{item}}
+            </li>
+        </ul>
+        <ul> 
+          <hr>  
+            <li *ngFor= "let colors of ['red', 'yellow', 'pink', 'green', 'white']">
+                This is {{colors}} color
+
+            </li>
+          <hr>  
+            <li *ngFor= "let animal of ['Panda', 'Cow', 'Elephant', 'Bear', 'Chipmunk']">
+              This is {{animal}} .
+
+          </li>
+        </ul>
+</div>
+<hr>
+
+<!-- tables structures-->
+<div class="container">
+<table>
+      <th>
+          Id
+      </th>
+      <th>
+          Name
+      </th>
+      <th>
+          Country
+      </th>
+      <tbody>
+        <tr *ngFor="let row of records"> 
+          <td>
+               {{ row.id}}
+            </td>
+            <td>
+                {{row.name}}
+            </td>
+            <td>
+                {{row.country}}
+            </td>
+        </tr>
+      </tbody>
+      <hr>
+      <tbody>
+           <tr *ngFor="let row of records">
+             <td *ngIf="row.id != 2">
+               {{row.id}}
+              </td>
+
+              <td *ngIf="row.name != 'shilpa'">
+                {{row.name}}
+               </td>
+
+               <td *ngIf="row.country != 'Rus'">
+                {{row.country}}
+               </td>
+
+           </tr>
+      </tbody>
+    
+</table>
+</div>
+<hr>
+<div class="container">
+<button type="button" class="btn btn-success mx-3" *ngFor="let c of contries">
+    {{c}}
+</button>
+</div>
+<hr>
+
+<!-- -->
+<div class="container">
+<select class="form-select" aria-label="Default select example">
+    <option selected> Selected country  </option>
+    <option value="1" *ngFor="let opt of contries"> {{opt}}</option>
+</select>
+</div><hr>
+
+<!--  ngSwitch -->
+<div class="container">
+  <h2> ngSwitch </h2>
+  <div [ngSwitch]="color">
+    <div> 
+    <div *ngSwitchCase=" 'red' "> You picker red color</div>
+    <div *ngSwitchCase=" 'blue' "> You picker blue color</div>
+    <div *ngSwitchCase=" 'green' "> You picker green color</div>
+    <!-- <div *ngSwitchDefault> Pick again !</div> -->
+  </div>
+</div>
+</div>
+
+<hr><hr>
+<div class="container">
+  <h3> Attribute Directives </h3>
+    <h3> *ngClass </h3>
+      <h5>The .class selector selects elements with a specific class attribute.</h5>
+          <h5>Ex:- 
+            <h5>Select and style all elements with class="intro": 
+                <div>  .intro  </div>
+             </h5>
+            </h5>
+    <hr>
+        <h2>*ngClass (deals with css classes)</h2>   
+            <div [ngClass] ="scoreObtained > 4 ? 'success-box' : 'failure-box' ">
+              <span> ng Class => Message</span>
+            </div> 
+    <hr>
+    <h5> *ngStyle (deals with CSS properties) </h5>  
+    <div
+         [ngStyle]="scoreObtained <= 3 ? {  'background-color' : 'rgb(36, 245, 67)', 'border-style' : 'solid' } : 
+         {'background-color' : 'rgb(244, 57, 24)','border-style': 'solid'}">
+         <span> ng Style => Message</span>
+        </div> 
+      <br> <hr>       
+
+
+
+
+ </div>

@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './Components/home/home.component';
 import { PhotosComponent } from './Components/photos/photos.component';
 import { CalculationComponent } from './Components/calculation/calculation.component';
+import { BindingComponent } from './Components/binding/binding.component';
+import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './Components/directives/directives.component';
 
 
 // configuration
@@ -15,14 +18,17 @@ import { CalculationComponent } from './Components/calculation/calculation.compo
     HomeComponent,
     PhotosComponent,
     CalculationComponent,
+    BindingComponent,
+    DirectivesComponent,
    
   ],
   imports: [                   // modules
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],               //services
   bootstrap: [AppComponent]
 })
-          //handle own responsibilities
+    //handle own responsibilities
 export class AppModule { }

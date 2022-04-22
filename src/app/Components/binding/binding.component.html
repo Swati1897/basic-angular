@@ -1,0 +1,127 @@
+<p>binding works!</p>
+
+<!-- Interpolation {{ }} -->
+<div class="container">
+  <h2> Interpolation => Double_Curly_Brass </h2>
+  <div class="row">
+    <h3> Introduction </h3>
+
+    <p> My name is <strong> {{name}}</strong>.My roll no. is <strong>{{rollNo }}</strong>.
+      Passed - <strong> {{pass }}</strong>
+    </p>
+  </div>
+</div>
+<hr>
+
+<!-- Property Binding - [ ]  -->
+
+<div class="container">
+  <h2> Property Binding - [ ]</h2>
+  <div class="row">
+    <input [type]="inputType" [minLength]="minL" [maxLength]="maxL"
+      [value]="fullName">
+  </div>
+</div>
+<hr>
+
+<!-- Event Binding - ()  -->
+
+<div class="container">
+  <h2> Event Binding -()=> click,
+    mouseenter,mouseleave,mousemove,mouseout,mouseover </h2>
+  <div class="row">
+    <button type="button" class="btn btn-danger" (click)="message"> Click Me!
+    </button> <hr>
+
+    <button type="button" class="btn btn-success" (MouseEvent)="message"> Click
+      Me! </button>
+    <h4> {{message}}</h4>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <h2> Event Binding 2 example</h2>
+  <h4>
+    Welcome to {{code}}
+  </h4>
+  <button (click)="onClick()"> Greet </button>
+  {{greeting}}
+</div>
+
+<hr>
+
+<!-- Two way binding -->
+
+<!-- Two way data binding 
+             - change from input to variable
+             - change variable and see input box -->
+<div class="container">
+  <h2> two way Binding - (from both ways - template/typescript class) </h2>
+  <div class="row">
+    <input type="text" name="name" [(ngModel)]="twoWay"> <!--imports the ( FormsModule ) -->
+    <h4> {{twoWay}}</h4>
+  </div>
+</div>
+
+<hr>
+
+<!--   Class Binding    style="background-color:red;"  -->
+<div class="container">
+  <h2> Class Binding </h2>
+  <div class="row">
+    <div [class]="cssClassName">
+      Dummy template page
+    </div>
+  </div>
+</div>
+<hr>
+
+<!--  Inline CSS  -->
+<div class="container">
+  <h2> Inline CSS </h2>
+  <div class="row">
+    <div style="background-color:#bbb; border:2px; color:#fff;
+      height: 100px; width: 200px; text-align:center; color:#000"> <b>Hello </b>
+      Hello
+    </div>
+  </div>
+
+  <hr>
+  <!-- Style Binding -->
+  <div class="container">
+    <h2>Style Binding </h2>
+    <div class="row">
+      <div [style.color]="styleObject.textColor" [style.height]="styleObject.ht"
+        [style.background]="styleObject.bgColor" [style.width]="styleObject.wd"
+        [style.border]="styleObject.brd">
+        Dummy template page
+        <br>
+
+        <h2 [ngStyle]="titleStyles"> style binding 3</h2>
+        
+      </div>
+    </div>
+  </div>
+  <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <h2>Style Binding</h2>
+      <div class="row">
+          <div [style.color]="styleObject.textColor" [style.height]="styleObject.ht" [style.background]="styleObject.bgColor">
+              Dummy
+          </div>
+      </div> -->
