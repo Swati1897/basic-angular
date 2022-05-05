@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-directives',
@@ -18,7 +18,11 @@ export class DirectivesComponent implements OnInit {
 ]
 public color ="red";
 
-scoreObtained = 10  ;
+scoreObtained = 10 ;
+
+// @Input() xyz: string ='initial';
+
+// @Input() result: number = 0;
 
 
   constructor() { }

@@ -1,0 +1,13 @@
+<!-- <p>animal works!</p> -->
+<div class="container">
+<p> parent component.</p>
+
+<h4>{{message}}</h4>
+</div>
+
+<p>---------------------------------------------------------</p>
+<!-- (outEvent)="acceptResult($event) -->
+
+<app-lion (childEvent)="message=$event" (abcdEvent)="data=$event" 
+></app-lion>
+
